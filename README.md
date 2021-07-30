@@ -30,8 +30,7 @@ Finally make sure the `LIGHT_NAME` is correct for your light/light group. If, fo
 
 It's important that the machine running the script correctly has the local timezone configured, and the time is synchronized (With NTP)
 ```
-$ echo "Australia/Melbourne" | sudo tee /etc/timezone
-$ sudo dpkg-reconfigure --frontend noninteractive tzdata
+$ sudo dpkg-reconfigure tzdata
 ```
 
 # Run the script
