@@ -135,6 +135,8 @@ def run(start, end):
         
     asyncio.get_event_loop().run_until_complete(run_light(start, end))
 
+    print("Transition complete.")
+
 
 while True:
     city = LocationInfo(CITY, COUNTRY, TIMEZONE, LATITUDE, LONGITUDE)
