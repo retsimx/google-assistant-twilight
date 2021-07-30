@@ -1,0 +1,9 @@
+google-assistant-grpc
+google-auth-oauthlib
+urllib3[secure]
+sounddevice
+tenacity
+SpeechRecognition
+astral
+timesched
+click
