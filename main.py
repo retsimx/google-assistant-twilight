@@ -129,6 +129,11 @@ async def run_light(start, end):
 
 
 def run(start, end):
+    if end > start:
+        print("Starting sunrise transition...")
+    else:
+        print("Starting sunset transition...")
+        
     asyncio.get_event_loop().run_until_complete(run_light(start, end))
 
 
