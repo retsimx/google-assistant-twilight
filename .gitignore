@@ -2,3 +2,4 @@ credentials/*
 venv/*
 .idea/*
 *.pyc
+local.py
