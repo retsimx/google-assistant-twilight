@@ -1,5 +1,5 @@
 # Google Assistant Twilight Light Temperature/Brightness Automator
-This project is a prototype that uses Google Assistant to automatically control the brightness Google Assistant connected lights during dawn and dusk.
+This project is a prototype that uses Google Assistant to automatically control the brightness and temperature of Google Assistant connected lights during dawn and dusk. This project is a similar concept to f.lux but for smart lights in your house.
 
 The algorithm uses a sine function so that transitions start and end slowly, and are quicker half way between start/end of sunrise/sunset. This algorithm is likely inaccurate to how the light curve really works.
 
@@ -21,7 +21,7 @@ Next copy your OAuth2 client secret json file in to the credentials directory of
 $ cd credentials
 $ google-oauthlib-tool --save --headless --scope https://www.googleapis.com/auth/assistant-sdk-prototype --credentials ./credentials.json --client-secrets client_secret_whatever.json
 ```
-# Set up local.py configuration
+## Set up local.py configuration
 Next modify the local.py file to match your local settings, the `LATITUDE` and `LONGITUDE` should be as close to where your lights are located as possible - Google Maps can give you the GPS coordinates of your address if required.
 
 Update the CITY/COUNTRY/TIMEZONE to match your location as well.
@@ -33,7 +33,7 @@ It's important that the machine running the script correctly has the local timez
 $ sudo dpkg-reconfigure tzdata
 ```
 
-# Run the script
+## Run the script
 There is no systemd unit or daemon for this project yet - I've just been running it inside `tmux`.
 ```
 $ tmux
