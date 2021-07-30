@@ -11,8 +11,9 @@ from astral.sun import sun
 from assistant.pushtotalk import create_assistant
 
 try:
-    from .local import *
-except:
+    from local import *
+except Exception as e:
+    print("Dead", e)
     pass
 
 tzinfo = datetime.datetime.now(datetime.timezone.utc).astimezone().tzinfo
